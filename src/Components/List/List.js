@@ -18,9 +18,11 @@ const List = ({
   const listRef = React.useRef(null);
 
   React.useEffect(() => {
-    console.log('am I getting changes list.js');
     if (optionIdx) {
-      refs[optionIdx]?.current?.scrollIntoView();
+      refs[optionIdx].current.scrollIntoView({
+        block: 'nearest',
+        inline: 'nearest',
+      });
     }
   }, []);
 
