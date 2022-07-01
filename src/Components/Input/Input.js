@@ -15,7 +15,7 @@ const Input = ({
 
   const handleInput = ({ target: { value } }) => {
     setTimeValue(value);
-    setOpen(false);
+    if (value.match(/((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/)) setOpen(false);
   };
 
   const handleClick = () =>
