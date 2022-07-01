@@ -17,12 +17,6 @@ const List = ({
 
   const listRef = React.useRef(null);
 
-  React.useEffect(() => {
-    if (optionIdx) {
-      refs[optionIdx].current.scrollIntoView();
-    }
-  }, []);
-
   return (
     <ul className="ui-timepicker-list" role="listbox" ref={listRef}>
       {timeOptions.map(({ label, value, className }, idx) =>
