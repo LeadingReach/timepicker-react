@@ -24,16 +24,22 @@ const ListItem = ({
   }, [focus, optionIdx, idx]);
 
   React.useEffect(() => {
+    console.log('am I getting changes listItem 1.js');
     if (roundedValue === value) {
       setSelected(classNames.selected);
+      setTimeout(() => {
+         ref?.current?.scrollIntoView();
+      }, 0);
     } else {
       setSelected('');
     }
   }, [roundedValue, value]);
 
   React.useEffect(() => {
+    console.log('am I getting changes listItem 2.js');
     if (optionIdx === idx) {
       setSelected(classNames.selected);
+      ref?.current?.scrollIntoView();
     } else {
       setSelected('');
     }
