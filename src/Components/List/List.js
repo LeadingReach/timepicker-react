@@ -19,7 +19,7 @@ const List = ({
 
   React.useEffect(() => {
     if (optionIdx) {
-      refs[optionIdx].current.scrollIntoView({
+      refs[optionIdx]?.current?.scrollIntoView({
         block: 'nearest',
         inline: 'nearest',
       });

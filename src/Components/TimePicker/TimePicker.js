@@ -75,8 +75,14 @@ const TimePicker = props => {
       setShowErr(false);
     } else if (timeValue && !open && Object.values(err).length) {
       setShowErr(true);
+    } else if ( // If dropdown is open and there's a full timeValue, close dropdown
+      open
+      && timeValue
+      && timeValue.match(/((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/)
+    ) {
+      handleMaskClick();
     }
-  }, [timeValue, open]);
+  }, [timeValue]);
 
   const handleMaskClick = () => {
     setOpen(false);
