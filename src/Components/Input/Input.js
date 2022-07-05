@@ -44,6 +44,7 @@ const Input = ({
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         onFocus={handleFocus}
+        placeholder="HH:MM A"
         />
       {showErr && Object.values(err).map((err, i) =>
         <span className="time-input-err-text" key={i}>
