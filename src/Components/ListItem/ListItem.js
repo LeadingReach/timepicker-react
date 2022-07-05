@@ -27,10 +27,9 @@ const ListItem = ({
     if (roundedValue === value) {
       setSelected(classNames.selected);
       setTimeout(() => {
-         ref.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-          inline: 'start',
+         ref?.current?.scrollIntoView({
+          block: 'nearest',
+          inline: 'nearest',
         });
       }, 0);
     } else {
@@ -41,10 +40,9 @@ const ListItem = ({
   React.useEffect(() => {
     if (optionIdx === idx) {
       setSelected(classNames.selected);
-      ref.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-        inline: 'start',
+      ref?.current?.scrollIntoView({
+        block: 'nearest',
+        inline: 'nearest',
       });
     } else {
       setSelected('');
