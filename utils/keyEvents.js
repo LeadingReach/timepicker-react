@@ -4,12 +4,7 @@ const _inputKeyPressDown = (e, value, setOpen, formatTimeValue, setFocus) => {
     case 9: // tab
     case 13: // return
       setOpen(false);
-      if (value) {
-        // formatValue
-        // hide list
-        // basically same as when clicking on blur
-        formatTimeValue(value);
-      }
+      formatTimeValue(value);
       break;
     // eslint-disable-next-line no-duplicate-case
     case 13:
